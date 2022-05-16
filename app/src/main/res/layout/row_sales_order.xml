@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:id="@+id/contentLay"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtStoreSalesBsId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Kiambu genko store - 01091801"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:fontFamily="@font/montserrat_semibold"
+            />
+        <TextView
+            android:id="@+id/txtTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:gravity="end"
+            android:textSize="13sp"
+            android:text=" Total price: 200,000"
+            android:fontFamily="@font/montserrat_medium"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtBusinessName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:text="Abovenet technologies limited"
+            android:fontFamily="@font/montserrat_regular"
+            />
+        <TextView
+            android:id="@+id/txtItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Items:25"
+            android:fontFamily="@font/montserrat_medium"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_gray_bg"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtUpdateDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:text="Last update on: 12 Nov 2018"
+            android:fontFamily="@font/montserrat_medium"
+            />
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:text="Approved"
+            android:background="@color/successColor"
+            android:fontFamily="@font/montserrat_medium"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+</LinearLayout>

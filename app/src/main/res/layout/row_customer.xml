@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:id="@+id/contentLay"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:padding="10dp"
+           android:layout_marginStart="10dp"
+           android:layout_height="wrap_content">
+       <TextView
+           android:id="@+id/txtCompanyName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Company name"
+           android:textSize="15sp"
+           android:textColor="#000"
+           android:fontFamily="@font/montserrat_medium"
+           />
+           <TextView
+               android:layout_marginTop="5dp"
+               android:id="@+id/txtContactName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="contact name"
+               android:textSize="15sp"
+               android:textColor="#000"
+               android:fontFamily="@font/montserrat_regular"
+               />
+       </LinearLayout>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:textSize="15sp"
+           android:padding="10dp"
+           android:gravity="center"
+           android:drawableEnd="@drawable/ic_next"
+           />
+
+   </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="10dp"
+        android:background="@color/divider"/>
+</LinearLayout>
+
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/grayColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+           >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/grayColor"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <TextView
+                    android:id="@+id/txtSaleInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="No Sale"
+                    />
+
+                <ImageView
+                    android:contentDescription="@string/image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pos_sale"
+                    />
+                <TextView
+                    android:id="@+id/txtSalesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-23dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="11"
+                    android:textColor="@color/colorWhite"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.pos.PosActivity">
+        <com.vatsal.imagezoomer.ImageZoomButton
+            android:scaleType="center"
+            android:visibility="gone"
+            android:id="@+id/imgPicPreview1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/placeholder_image"
+            />
+
+    <LinearLayout
+        android:background="@color/grayColor"
+        android:id="@+id/totalLay"
+android:paddingTop="20dp"
+android:paddingEnd="20dp"
+android:paddingStart="20dp"
+        android:paddingBottom="0dp"
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtStoreName"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Store name"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/montserrat_medium"
+                />
+        <TextView
+            android:id="@+id/txtCartTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="20dp"
+            android:text="Total Ksh 1,135.00"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorWhite"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_below="@id/totalLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/colorWhite"
+        android:background="@color/grayColor"
+        app:tabMode="fixed" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/viewpager_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plain_bg2"
+        android:layout_above="@+id/checkoutLay"
+        />
+        <LinearLayout
+            android:id="@+id/checkoutLay"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnGetQrCode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:background="@color/grayColor"
+                android:text="Show QR Code"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="wrap_content"
+                android:background="@color/grayColor"
+                android:text="Checkout"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+
+        </LinearLayout>
+
+</RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorAccent"
+        app:srcCompat="@drawable/qr_white" />
+</android.support.design.widget.CoordinatorLayout>

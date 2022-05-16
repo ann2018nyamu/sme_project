@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ke.co.eclectic.quickstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- information necessary for testfairy -->
+    <!-- <uses-permission android:name="android.permission.READ_LOGS" /> -->
+    <!-- <uses-permission android:name="android.permission.BATTERY_STATS" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".inc.AppConfig"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".activities.creditors.CreditorsActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.SplashActivity" />
+        <activity
+            android:name=".activities.onboarding.SliderActivity"
+            android:theme="@style/AppTheme.Launcher"></activity>
+        <activity android:name=".activities.auth.AuthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.CountryCodeActivity" />
+        <activity
+            android:name=".activities.business.BusinessManageActivity"
+            android:label="@string/title_activity_business_manage"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.stores.AddStoreActivity"
+            android:label="@string/title_activity_business_manage"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.auth.SmsVerificationActivity" />
+        <activity android:name=".activities.auth.PasswordActivity" />
+        <activity android:name=".activities.MenuActivity" />
+        <activity android:name=".activities.EmployeesActivity" />
+        <activity android:name=".activities.UserProfileActivity"></activity>
+        <activity android:name=".activities.TestActivity" />
+        <activity android:name=".activities.products.AddProductActivity" />
+        <activity android:name=".activities.products.ProductCategoryActivity" />
+        <activity android:name=".activities.pos.PosActivity" />
+        <activity android:name=".activities.pos.CartEditActivity"></activity>
+        <activity android:name=".activities.products.BarCodeActivity" />
+        <activity android:name=".activities.products.AllProductActivity" />
+        <activity android:name=".activities.supplier.SupplierActivity" />
+        <activity android:name=".activities.supplier.AddSupplierActivity" />
+        <activity android:name=".activities.inventory.InventoryActivity" />
+        <activity android:name=".activities.purchaseOrder.PurchaseOrderActivity" />
+        <activity android:name=".activities.purchaseOrder.AddPurchaseOrderActivity" />
+        <activity android:name=".activities.inventory.AddInventoryActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".activities.stores.AllStoresActivity" />
+        <activity android:name=".activities.purchaseOrder.POrderDetailsActivity" />
+        <activity android:name=".barcode.BarcodeCaptureActivity" />
+        <activity android:name=".activities.salesorder.SalesOrderActivity" />
+        <activity android:name=".activities.salesorder.SOrderDetailsActivity" />
+        <activity android:name=".activities.salesorder.AddSalesOrderActivity" />
+        <activity android:name=".activities.customer.CustomerActivity" />
+        <activity android:name=".activities.customer.AddCustomerActivity" />
+        <activity android:name=".activities.RulesActivity" />
+        <activity android:name=".activities.payment.PaymentsActivity"></activity>
+        <activity android:name=".activities.reports.SupplierReportActivity"></activity>
+
+    </application>
+
+</manifest>

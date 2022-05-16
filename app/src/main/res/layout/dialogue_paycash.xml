@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    tools:ignore="MissingPrefix"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay1"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Cash Payment"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:id="@+id/layText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_cash"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+                <TextView
+                    android:id="@+id/txtTotalCash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ksh. 2300"
+                    android:gravity="end"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Cash Received"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+                <EditText
+                    android:id="@+id/etxtReceivedAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textSize="20sp"
+                    android:hint="Ksh. 0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Balance"
+                    android:textSize="20sp"
+                    android:textColor="@color/successColor"
+                    android:fontFamily="@font/montserrat_bold"
+                    />
+                <TextView
+                    android:id="@+id/txtBalanceAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textSize="20sp"
+                    android:hint="Ksh. 0.00"
+                    android:textColor="@color/successColor"
+                    android:fontFamily="@font/montserrat_bold"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/optionLay"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@android:color/transparent"
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_semibold"
+
+                    />
+                <Button
+                    android:background="@android:color/transparent"
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/btnActiveFontColor"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

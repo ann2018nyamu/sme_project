@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".activities.auth.AuthActivity"
+    android:layout_height="match_parent">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal" >
+
+    <ImageView
+        android:contentDescription="Logo"
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/logo" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etxtSignUpcountryCode"
+                android:layout_width="match_parent"
+                android:imeActionId="30"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:hint="@string/dial_code"
+                style="@style/EditTextTheme"
+                android:inputType="phone"
+                />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etxtPhoneNumber"
+                android:layout_width="match_parent"
+                android:imeActionId="30"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobile_number"
+                style="@style/EditTextTheme"
+                android:inputType="phone"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtFname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name"
+            android:imeOptions="actionNext"
+            style="@style/EditTextTheme"
+            android:inputType="text"
+            android:imeActionId="35"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtMname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeActionId="40"
+            android:imeOptions="actionNext"
+            android:hint="@string/middle_name"
+            style="@style/EditTextTheme"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtLname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:imeActionId="45"
+            style="@style/EditTextTheme"
+            android:hint="@string/last_name"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:imeActionId="50"
+            android:hint="@string/date_of_birth"
+            style="@style/EditTextTheme"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/divider"/>
+        </LinearLayout>
+        
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/etxtcountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:imeActionId="55"
+        android:hint="@string/nationality"
+        android:drawableRight="@drawable/ic_next"
+        android:drawableEnd="@drawable/ic_next"
+        style="@style/EditTextTheme"
+        android:inputType="text"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+
+</LinearLayout>
+
+
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtIdPassport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeActionId="60"
+            android:imeOptions="actionNext"
+            android:hint="@string/id_passport"
+            style="@style/EditTextTheme"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etxtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:imeActionId="65"
+            android:hint="@string/email_address"
+            style="@style/EditTextTheme"
+            android:inputType="textEmailAddress"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_below="@+id/tlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonTheme"
+        android:text="@string/signup"
+        />
+
+    <LinearLayout
+        android:layout_gravity="bottom|center"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/by_signing_in_you_agree_the"
+                android:fontFamily="@font/montserrat_regular"
+                />
+            <!--android:text="@string/terms_privacy"-->
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms of  Service"
+                android:id="@+id/txtTerms2"
+                android:textColor="@color/linkTextColor"
+                android:fontFamily="@font/montserrat_regular"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" and "
+                android:fontFamily="@font/montserrat_regular"
+                />
+            <TextView
+                android:id="@+id/txtPrivacyPolicy2"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Privacy Policy "
+                android:textColor="@color/linkTextColor"
+                android:fontFamily="@font/montserrat_regular"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

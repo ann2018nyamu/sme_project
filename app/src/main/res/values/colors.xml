@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+<!--    <color name="colorPrimary">#FF6F00</color>-->
+<!--    <color name="colorPrimaryDark">#FF6F00</color>-->
+<!--    <color name="colorPrimaryLight">#FFCA28</color>-->
+<!--    <color name="colorAccent">#00afaa</color>-->
+<!--    <color name="colorMenuBg">#EBFF6F00</color>-->
+
+<!--    <color name="colorPrimary">#FF6F00</color>-->
+<!--    <color name="colorPrimaryDark">#FF6F00</color>-->
+<!--    <color name="colorPrimaryLight">#FFCA28</color>-->
+<!--    <color name="colorAccent">#00afaa</color>-->
+<!--    <color name="colorMenuBg">#EBFF6F00</color>-->
+
+    <!--DADA   stanbicbank  yellow theme-->
+    <color name="colorPrimary">#00a7e1</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryLight">#00BCD4</color>
+    <color name="colorAccent">#FBC02D</color>
+    <color name="colorMenuBg">#EB00a7e1</color>
+
+    <!--Original quickstore design colors-->
+    <!--<color name="colorPrimary">#663091</color>-->
+    <!--<color name="colorPrimaryDark">#370063</color>-->
+    <!--<color name="colorPrimaryLight">#767676</color>-->
+    <!--<color name="colorAccent">#f04e25</color>-->
+    <!--<color name="colorMenuBg">#f9663091</color>-->
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackLight">#333333</color>
+    <color name="colorSecondaryText">#757575</color>
+
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="colorTabs">#4a4a4a</color>
+    <color name="editTextPlaceholderColor">#6f6f6f</color>
+    <color name="editTextColor">#000000</color>
+    <color name="bar1Color">#af93c7</color>
+    <color name="bar2Color">#f98a5e</color>
+
+    <color name="bar11Color">#652796</color>
+    <color name="bar22Color">#ff4a00</color>
+    <color name="errorColor">#e3435a</color>
+    <color name="successColor">#007236</color>
+
+    <!--<color name="activeColor">#da2429</color>-->
+    <color name="activeColor">@color/colorAccent</color>
+    <color name="inactiveColor">#c8c8c8</color>
+
+    <color name="linkTextColor">@color/colorAccent</color>
+    <color name="grayColor">#d8d8de</color>
+    <color name="btnActiveFontColor">#f04e26</color>
+
+
+</resources>

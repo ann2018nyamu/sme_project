@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="menu_imgs">
+        <item>@drawable/product_img</item>
+        <item>@drawable/inventory</item>
+        <!--<item>@drawable/commission</item>-->
+        <item>@drawable/sales</item>
+        <item>@drawable/supplier</item>
+        <item>@drawable/supplier</item>
+        <item>@drawable/pos</item>
+        <item>@drawable/stores</item>
+        <item>@drawable/staff</item>
+        <item>@drawable/reports</item>
+        <item>@drawable/settings</item>
+        <item>@drawable/purchase_order</item>
+        <item>@drawable/settings</item>
+    </integer-array>
+
+</resources>

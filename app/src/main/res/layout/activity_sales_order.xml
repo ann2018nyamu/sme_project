@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@drawable/plain_bg2"
+    tools:context=".activities.salesorder.SalesOrderActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:background="@color/grayColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/extCatSearch"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:padding="3dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Search sales order"
+                    android:drawableEnd="@drawable/ic_action_product_search"
+                    android:background="@drawable/round_corners"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:contentDescription="@string/image"
+                    android:visibility="gone"
+                    android:id="@+id/imgAddProduct"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/qr"
+                    android:layout_alignEnd="@+id/extCatSearch"
+                    android:layout_centerVertical="true"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtInfo"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No sales order"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/salesOrderRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem = "@layout/row_sales_order"
+                />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/add_porder" />
+
+</android.support.design.widget.CoordinatorLayout>

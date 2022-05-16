@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@drawable/plain_bg2"
+    tools:context=".activities.customer.CustomerActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/firstLay"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@color/grayColor"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <EditText
+                    android:id="@+id/extCustomerSearch"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:hint="Search Customer"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/round_corners"
+                    android:drawableEnd="@drawable/product_search"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:contentDescription="@string/image"
+                    android:id="@+id/imgAddCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add_supplier"
+                    android:layout_centerVertical="true"
+                    />
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/customerSRL"
+                android:layout_below="@+id/firstLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/customersRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem = "@layout/row_customer"
+                    />
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_below="@+id/firstLay"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:text="No Customer"
+                />
+
+        </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

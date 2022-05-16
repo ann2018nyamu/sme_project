@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plain_bg2"
+    tools:context=".activities.purchaseOrder.POrderDetailsActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:padding="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtToolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Order Details"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+                <ImageView
+                    android:id="@+id/imgCancelOrder"
+                    android:layout_gravity="end"
+                    android:src="@drawable/delete_white"
+                    android:layout_width="60dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="#f00"
+                    android:layout_height="?actionBarSize" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:padding="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.vatsal.imagezoomer.ImageZoomButton
+            android:visibility="gone"
+            android:scaleType="center"
+            android:id="@+id/imgPicPreview1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/placeholder_image"
+            />
+        <android.support.v4.widget.NestedScrollView
+                android:layout_above="@+id/layBtn"
+            android:layout_alignParentTop="true"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/statusLay"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/round_black_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/montserrat_semibold"
+                        />
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/montserrat_semibold"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/approvedLay"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Approved By:"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+                    <TextView
+                        android:id="@+id/txtApprovedBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Martvako"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/montserrat_regular"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/white_shadow_bg"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txtStoreName"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:text="Kiambu Genko Store"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/montserrat_semibold"
+                            />
+                        <TextView
+                            android:textSize="12sp"
+                            android:id="@+id/txtOrderId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order Id - 01091801"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/montserrat_semibold"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txtCreatedDate"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:text="Created on: 	12 Nov 2018"
+                            android:fontFamily="@font/montserrat_regular"
+                            />
+                        <TextView
+                            android:id="@+id/txtLastUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="last update on: 12 Nov 2018"
+                            android:layout_gravity="start"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/montserrat_regular"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:background="@drawable/white_shadow_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Customer:"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorPrimary"
+                                android:fontFamily="@font/montserrat_semibold"
+                                />
+                            <TextView
+                                android:textSize="12sp"
+                                android:id="@+id/txtSupplierName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Abovenet technologies limited"
+                                android:layout_gravity="start"
+                                android:fontFamily="@font/montserrat_regular"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:layout_height="wrap_content"
+                                android:text="Created by:"
+                                android:textColor="@color/colorPrimary"
+                                android:fontFamily="@font/montserrat_semibold"
+                                />
+                            <TextView
+                                android:textSize="12sp"
+                                android:id="@+id/txtCreatedBy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Martin Kamunyu"
+                                android:layout_gravity="start"
+                                android:fontFamily="@font/montserrat_regular"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Information"
+                    android:layout_gravity="start"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_marginTop="10dp"
+                    />
+                <View
+                    android:layout_marginStart="5dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:background="@drawable/white_shadow_bg"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="4"
+                                android:layout_height="wrap_content"
+                                android:text="Product"
+                                android:textSize="13sp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_gravity="start"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:layout_marginTop="10dp"
+                                />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Qt"
+                                android:textSize="13sp"
+                                android:layout_gravity="start"
+                                android:textColor="@color/colorPrimaryText"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:layout_marginTop="10dp"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:text="Price/Unit"
+                                android:gravity="end"
+                                android:textSize="13sp"
+                                android:layout_gravity="start"
+                                android:textColor="@color/colorPrimaryText"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:layout_marginTop="10dp"
+                                />
+                        </LinearLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/orderProductsRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem = "@layout/row_order_product"
+                            />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@drawable/white_shadow_bg"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="Discount"
+                        android:layout_gravity="start"
+                        android:textColor="@color/successColor"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtTotalDiscount"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="Ksh 1740"
+                        android:gravity="end"
+                        android:layout_gravity="start"
+                        android:textColor="@color/successColor"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:background="@drawable/white_shadow_bg"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:layout_gravity="start"
+                            android:textColor="@color/colorPrimaryText"
+                            android:fontFamily="@font/montserrat_semibold"
+                            />
+                        <TextView
+                            android:id="@+id/txtTotalQty"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Qt 18"
+                            android:layout_gravity="start"
+                            android:textColor="@color/colorPrimaryText"
+                            android:fontFamily="@font/montserrat_semibold"
+                            />
+                        <TextView
+                            android:id="@+id/txtTotalPrice"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="1740 Ksh"
+                            android:gravity="end"
+                            android:layout_gravity="start"
+                            android:textColor="@color/colorPrimaryText"
+                            android:fontFamily="@font/montserrat_semibold"
+                            />
+                    </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/layBtn"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="0dp"
+                style="@style/ButtonTheme"
+                android:text="@string/dialog_cancel"
+                />
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_inactive"
+                android:layout_marginTop="0dp"
+                style="@style/ButtonTheme"
+                android:layout_marginEnd="20dp"
+                android:text="@string/edit"
+                />
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_marginTop="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_active"
+                style="@style/ButtonTheme"
+                android:text="@string/confirm"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

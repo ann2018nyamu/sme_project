@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    tools:context=".activities.pos.CartEditActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/grayColor"
+            android:layout_below="@+id/lay1"
+            android:id="@+id/totalLay"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:contentDescription="@string/image"
+                android:layout_margin="10dp"
+                android:id="@+id/imgCancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_cancel_black"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Ksh 1,335.00"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+                <TextView
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="Ksh 1,335.00"
+                    android:fontFamily="@font/montserrat_semibold"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:contentDescription="@string/image"
+                android:id="@+id/imgDelete"
+                android:background="#ff0000"
+                android:layout_gravity="end"
+                android:layout_width="60dp"
+                android:padding="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/trash_icon"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="20dp"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/product_price"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtInventoryPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="150.00"
+                        android:textColorHint="@color/editTextPlaceholderColor"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:inputType="numberDecimal"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+                    <TextView
+                        android:id="@+id/txtOfferDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="least pricing"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/montserrat_semibold"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@color/grayColor"
+                android:id="@+id/btnMinus"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:focusable="false"
+                android:textColor="@color/editTextPlaceholderColor"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+            <EditText
+                android:id="@+id/etxtInventoryQuantity"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:imeActionId="30"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="0 Qty"
+                android:textColorHint="@color/editTextPlaceholderColor"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@color/grayColor"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="+"
+                android:textColor="@color/editTextPlaceholderColor"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_active"
+            android:text="@string/update"
+            style="@style/ButtonTheme"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat_medium"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

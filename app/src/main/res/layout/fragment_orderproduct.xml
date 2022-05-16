@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/laySpinner"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgSearchAction"
+            android:layout_height="wrap_content">
+            <!--android:background="@drawable/round_corners"-->
+            <EditText
+                android:id="@+id/etxtSelectCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Select category"
+                android:fontFamily="@font/montserrat_regular"
+                android:focusable="false"
+                android:textSize="13sp"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/etxtSearch"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:hint="@string/search_all_items"
+            android:textSize="13sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_toStartOf="@+id/imgSearchAction"
+            android:layout_height="30dp" />
+        <View
+            android:id="@+id/vSeparator"
+            android:background="@color/divider"
+            android:layout_width="1dp"
+            android:layout_toStartOf="@+id/imgSearchAction"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:contentDescription="@string/image"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imgSearchAction"
+            android:layout_margin="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/product_search"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:id="@+id/txtInfo"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="info"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="10dp"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/productSR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem = "@layout/row_posinventorystock"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+</LinearLayout>

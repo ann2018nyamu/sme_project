@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay1"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:contentDescription="@string/image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/staff_add"
+                />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txtTitle"
+                android:layout_below="@+id/google_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="Dialogue Title"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:id="@+id/layText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etxtUsername"
+                android:layout_width="match_parent"
+                android:imeActionId="10"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                style="@style/EditTextTheme"
+                android:inputType="textNoSuggestions"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtcountryCode"
+                        android:layout_width="match_parent"
+                        android:imeActionId="15"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/dial_code"
+                        style="@style/EditTextTheme"
+                        android:inputType="phone"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:imeActionId="20"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_number"
+                        style="@style/EditTextTheme"
+                        android:inputType="phone"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assigned_store"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+                <Spinner
+                    android:id="@+id/spinnerAssignedStore"
+                    android:layout_width="match_parent"
+                    android:gravity="bottom"
+                    android:background="@null"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/divider"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assigned_role"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+                <Spinner
+                    android:id="@+id/spinnerAssignedRole"
+                    android:layout_width="match_parent"
+                    android:gravity="bottom"
+                    android:background="@null"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/divider"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/optionLay"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@android:color/transparent"
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:background="@android:color/transparent"
+                    android:id="@+id/btnInvite"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/linkTextColor"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Invite staff"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="@color/colorWhite"/>
+
+            <gradient
+            android:centerX="0.5"
+            android:centerY="0.3"
+            android:endColor="@color/colorPrimary"
+            android:gradientRadius="300dp"
+            android:startColor="@color/colorPrimary"
+            android:type="radial" />
+        </shape>
+    </item>
+    <item android:height="500dp"
+        android:width="500dp">
+        <bitmap
+            android:alpha="0.3"
+            android:gravity="center"
+            android:src="@drawable/mtn_image2" />
+    </item>
+
+
+</layer-list>

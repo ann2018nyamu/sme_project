@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:id="@+id/contentLay"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bank_building"
+            android:padding="10dp"
+            android:gravity="center"
+            android:drawableEnd="@drawable/ic_next"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtCreditorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Creditor name"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_medium"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Amount"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_regular"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtAmountPayable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Payable amount"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_regular"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtCreditorInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Interest"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_regular"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtCreditorDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Duration"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="10dp"
+        android:background="@color/divider"/>
+</LinearLayout>
+
+

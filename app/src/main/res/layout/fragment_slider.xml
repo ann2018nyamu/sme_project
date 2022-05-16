@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    tools:context=".activities.onboarding.fragment.SliderFragment1">
+
+    <TextView
+        android:id="@+id/txtTitle1"
+        android:textSize="21sp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content"
+        android:text="@string/it_will_help_you" />
+
+    <ImageView
+        android:contentDescription="@string/image"
+        android:id="@+id/imgPreview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/keep_record"
+        />
+
+    <TextView
+        android:id="@+id/txtTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="center"
+        android:text="@string/keep_records_of" />
+
+    <TextView
+        android:id="@+id/txtTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/purchase_sales" />
+
+</LinearLayout>

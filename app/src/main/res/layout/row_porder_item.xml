@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/contentLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtOrderStockName"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Brookside Nature"
+            android:padding="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            />
+        <TextView
+            android:id="@+id/txtOrderStockPrice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ksh 150000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:fontFamily="@font/montserrat_regular"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgRemove"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/grayColor"
+                android:src="@drawable/remove_qty"/>
+            <EditText
+                android:id="@+id/etxtOrderStockQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:minLines="6"
+                android:focusable="false"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/montserrat_medium"
+                />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/grayColor"
+                android:src="@drawable/add_qty"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:text="Ksh 150"
+        android:padding="10dp"
+        />
+</LinearLayout>

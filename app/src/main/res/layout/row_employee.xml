@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+   android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:paddingTop="5dp"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+   android:orientation="horizontal"
+        android:id="@+id/contentLay"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserimg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/placeholder_profile"
+        />
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Anne Akinyi"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat_bold"
+                />
+            <View
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_green"
+                />
+            <TextView
+                android:id="@+id/txtUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manager"
+                android:textColor="@color/colorPrimary"
+                android:gravity="right"
+                android:fontFamily="@font/montserrat_light"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtStoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Storename:Haslam Bike shop"
+            android:textColor="@color/colorPrimaryText"
+            android:fontFamily="@font/montserrat_medium"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:contentDescription="@string/image"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        />
+
+</LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+</LinearLayout>

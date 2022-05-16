@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_store"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Store" />
+        <item
+            android:id="@+id/nav_staff"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Staff" />
+
+       <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Product" />
+
+       <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Inventory" />
+
+       <item
+            android:id="@+id/nav_commission"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Commission" />
+
+       <item
+            android:id="@+id/nav_sales"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Sales" />
+
+       <item
+            android:id="@+id/nav_supplier"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Supplier" />
+
+       <item
+            android:id="@+id/nav_pos"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="POS" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Reports" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Settings" />
+
+
+
+        <item
+            android:id="@+id/nav_mbusiness"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Manage Business" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_add_cart_white_24dp"
+            android:title="Log Out" />
+    </group>
+</menu>

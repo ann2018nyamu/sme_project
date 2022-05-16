@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@drawable/plain_bg2"
+
+    tools:context=".activities.inventory.AddInventoryActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/inventoryLay"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.vatsal.imagezoomer.ImageZoomButton
+                android:scaleType="center"
+                android:visibility="gone"
+                android:id="@+id/imgPicPreview1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/placeholder_image"
+                />
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etxtSelectedStore"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:imeActionId="20"
+                    android:imeOptions="actionNext"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Select store"
+                    android:layout_marginTop="0dp"
+                    android:drawableEnd="@drawable/ic_next"
+                    style="@style/EditTextTheme"
+                    android:inputType="textNoSuggestions"
+                    />
+                <EditText
+                    android:id="@+id/etxtSelectedProduct"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:imeActionId="20"
+                    android:imeOptions="actionNext"
+                    android:layout_height="match_parent"
+                    android:hint="Select Product"
+                    android:layout_marginTop="0dp"
+                    android:drawableEnd="@drawable/ic_next"
+                    style="@style/EditTextTheme"
+                    android:inputType="textNoSuggestions"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtProductUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Unit"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+            <TextView
+                android:id="@+id/txtProductCategory"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Category"
+                android:textColor="#000"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/etxtStockQty"
+                    android:layout_width="match_parent"
+                    android:imeActionId="20"
+                    android:imeOptions="actionNext"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Stock(Qty)"
+                    android:layout_marginTop="0dp"
+                    style="@style/EditTextTheme"
+                    android:inputType="numberSigned"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/etxtMinStockQty"
+                android:layout_width="match_parent"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="minimum Stock(Qty)"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="numberSigned"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+            <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/etxtPurchasePrice"
+                android:layout_width="match_parent"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="Purchase price"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="numberSigned"
+                />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/etxtSalePrice"
+                android:layout_width="match_parent"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="Sale price"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="numberSigned"
+                />
+                </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/etxtSalesType"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="Offer price"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="textNoSuggestions"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_height="match_parent">
+                <Spinner
+                    android:id="@+id/spinnerSaleType"
+                    android:layout_width="match_parent"
+                    android:gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"/>
+
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content" >
+            <EditText
+                android:id="@+id/etxtOfferprice"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="Offer price"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="numberSigned"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/round_gray_bg"
+                android:src="@drawable/gallery_white"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image" />
+
+            <Button
+                android:id="@+id/btnSaveInventory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_inactive"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                style="@style/ButtonTheme"
+                android:text="Stock in"
+                />
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

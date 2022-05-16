@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    tools:context=".activities.salesorder.AddSalesOrderActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/grayColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:background="@color/grayColor"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:background="@color/grayColor"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize">
+                    <TextView
+                        android:id="@+id/txtSalesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Create Sale Order"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                    <ImageView
+                        android:contentDescription="@string/image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/pos_sale"
+                        />
+                    <TextView
+                        android:id="@+id/txtPurchaseCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-24dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginEnd="15dp"
+                        android:text="10"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/imgCancel"
+                    android:contentDescription="@string/image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_cancel_black"
+                    android:layout_marginEnd="20dp"
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.purchaseOrder.AddPurchaseOrderActivity">
+
+        <LinearLayout
+            android:background="@color/grayColor"
+            android:id="@+id/totalLay"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtStoreName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Kiambu genko"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/colorWhite"
+                        />
+                    <TextView
+                        android:id="@+id/txtSalesOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtPurchaseTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Total Ksh 1,135.00"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_below="@id/totalLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/colorWhite"
+            android:background="@color/grayColor"
+            app:tabMode="fixed" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@+id/tabLayout"
+            android:id="@+id/viewpager_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnCheckout"
+            android:background="@drawable/plain_bg2"
+            />
+
+        <Button
+            android:id="@+id/btnCheckOutOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grayColor"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:text="Checkout"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat_semibold"
+            />
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorAccent"
+        app:srcCompat="@drawable/qr_white" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@drawable/plain_bg2"
+    tools:context=".activities.business.BusinessManageActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.business.BusinessManageActivity"
+        tools:showIn="@layout/activity_business_manage">
+
+
+
+        <LinearLayout
+            android:id="@+id/addBusinessLay"
+            android:orientation="vertical"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Quickstore.\nUsername tell us little about your business"
+                android:id="@+id/txtInfo"
+                android:textColor="@color/linkTextColor"
+                />
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_horizontal"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtBusinessName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Business Name"
+                        android:imeOptions="actionNext"
+                        style="@style/EditTextTheme"
+                        android:inputType="text"
+                        android:imeActionId="10"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtcountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:imeActionId="20"
+                        android:hint="Country"
+                        android:drawableEnd="@drawable/ic_next"
+                        style="@style/EditTextTheme"
+                        android:inputType="text"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtCityTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:imeActionId="30"
+                        android:hint="City/Town"
+                        style="@style/EditTextTheme"
+                        android:inputType="text"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/etxtcountryCode"
+                                android:layout_width="match_parent"
+                                android:imeActionId="30"
+                                android:imeOptions="actionNext"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/dial_code"
+                                style="@style/EditTextTheme"
+                                android:inputType="phone"
+                                />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/etxtTelephone"
+                                android:layout_width="match_parent"
+                                android:imeActionId="30"
+                                android:imeOptions="actionNext"
+                                android:layout_height="wrap_content"
+                                android:hint="Telephone/Mobile"
+                                style="@style/EditTextTheme"
+                                android:inputType="phone"
+                                />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etxtLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:imeActionId="50"
+                        style="@style/EditTextTheme"
+                        android:hint="Physical Location"
+                        android:inputType="text"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtPostalAddr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionId="60"
+                        android:imeOptions="actionNext"
+                        android:hint="Post address(Optional)"
+                        style="@style/EditTextTheme"
+                        android:inputType="textPostalAddress"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:imeActionId="70"
+                        android:hint="Email ddress(Optional)"
+                        style="@style/EditTextTheme"
+                        android:inputType="textEmailAddress"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionId="80"
+                        android:imeOptions="actionSend"
+                        android:imeActionLabel="Continue"
+                        android:hint="Website(Optional)"
+                        style="@style/EditTextTheme"
+                        android:inputType="textWebEditText"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnContinue"
+                        android:layout_below="@+id/tlPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonTheme"
+                        android:text="Continue"
+                        />
+                </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

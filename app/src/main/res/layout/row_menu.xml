@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:id="@+id/contentLay"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/border_lay_white"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView
+      android:contentDescription="@string/image"
+      android:id="@+id/imgPrev"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:src="@drawable/drawer_cart"
+      />
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        />
+</LinearLayout>
+
+

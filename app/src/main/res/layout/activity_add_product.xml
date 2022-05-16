@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@drawable/plain_bg2"
+
+    tools:context=".activities.products.AddProductActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/productLay"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.vatsal.imagezoomer.ImageZoomButton
+                android:scaleType="center"
+                android:visibility="gone"
+                android:id="@+id/imgPicPreview1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/placeholder_image"
+                />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="center"
+            android:background="@color/grayColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etxtSelectCategory"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corners"
+                android:hint="Select category"
+                android:fontFamily="@font/montserrat_regular"
+                android:focusable="false"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                />
+            <ImageView
+                android:id="@+id/imgAddCategory"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/add_product"
+                android:contentDescription="@string/image"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etxtProdName"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:imeActionId="20"
+                android:imeOptions="actionNext"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/productName"
+                android:layout_marginTop="0dp"
+                style="@style/EditTextTheme"
+                android:inputType="textNoSuggestions"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+          <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="12sp"
+                  android:text="Product Unit"
+                  />
+              <Spinner
+                  android:id="@+id/spinnerProdUnit"
+                  android:layout_width="match_parent"
+                  android:gravity="bottom"
+                  android:background="#0000"
+                  android:layout_height="wrap_content"/>
+              <View
+                  android:layout_marginTop="5dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/divider"/>
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupBarcode"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioBarCode"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_height="wrap_content"
+                    android:text="@string/has_barcode"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioGenerateCode"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:layout_height="wrap_content"
+                    android:text="@string/generate_barcode" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/hasCodeLay"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtProdCode"
+                       android:layout_width="match_parent"
+                        android:imeActionId="20"
+                        android:imeOptions="actionNext"
+                        android:layout_height="match_parent"
+
+                        android:textSize="13sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="Barcode/QR code"
+                        android:layout_marginTop="0dp"
+                        style="@style/EditTextTheme"
+                        android:inputType="textNoSuggestions"
+                        />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/scanCodeLay"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:contentDescription="@string/image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/qr"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/round_gray_bg"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scan code"
+                        android:fontFamily="@font/montserrat_regular"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/generateCodeLay"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <LinearLayout
+                   android:orientation="vertical"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_marginEnd="20dp"
+                   android:layout_height="wrap_content">
+                   <Spinner
+                       android:layout_marginTop="10dp"
+                       android:id="@+id/spinnerGenCode"
+                       android:layout_width="match_parent"
+                       android:gravity="bottom"
+                       android:background="@null"
+                       android:layout_height="wrap_content"/>
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:layout_marginBottom="5dp"
+                       android:background="@color/divider"/>
+
+               </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:contentDescription="@string/image"
+                        android:id="@+id/imgCodePreview"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/qr"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/round_gray_bg"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtSaveCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save code"
+                        android:fontFamily="@font/montserrat_regular"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/radioGroupPhoto"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioUploadPhoto"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_photo"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioTakePhoto"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/editTextPlaceholderColor"
+                    android:layout_height="wrap_content"
+                    android:text="@string/take_photo" />
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/picActionLay"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:contentDescription="@string/image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/gallery"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/round_gray_bg"
+                    />
+                <TextView
+                    android:id="@+id/txtPicAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_gallery"
+                    android:fontFamily="@font/montserrat_regular"
+                    />
+
+            </LinearLayout>
+            <ImageView
+                android:contentDescription="@string/image"
+                android:id="@+id/imgPreview"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/round_gray_bg"
+                android:src="@drawable/gallery_white"
+                android:layout_marginEnd="10dp"
+                />
+            <Button
+                android:id="@+id/btnSaveProduct"
+                android:layout_below="@+id/etxtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_inactive"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                style="@style/ButtonTheme"
+                android:text="Save Product"
+                />
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
